@@ -13,14 +13,14 @@ def fill_excel():
     ws = wb["Template"]  # sheet name in your Excel file
 
     # Fill specific cells (preserving formulas/dropdowns)
-    ws["B3"] = data.get("pay_period", "")
+    ws["B3"] = data.get("pay_period", "September - October")
     ws["B4"] = data.get("employee_name", "")
-    ws["A13"] = data.get("project", "")
-    ws["B13"] = data.get("shift_type", "")
-    ws["C13"] = data.get("start_time", "")
-    ws["D13"] = data.get("end_time", "")
-    ws["G13"] = data.get("pay_rate", 0)
-    ws["B77"] = data.get("signature", "")
+    ws["A13"] = data.get("project", "Woodleaze")
+    ws["B13"] = data.get("shift_type", "Day Shift")
+    ws["C13"] = data.get("start_time", "22/09/2024 08:00")
+    ws["D13"] = data.get("end_time", "22/09/2024 17:00")
+    ws["G13"] = data.get("pay_rate", 1)
+    ws["B77"] = data.get("signature", "Ayoor")
 
     # Save to a temporary file
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".xlsx")
